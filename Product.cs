@@ -1,0 +1,17 @@
+﻿namespace ConsoleApp74.Models;
+
+using System.ComponentModel.DataAnnotations;
+
+public class Product
+{
+    public int Id { get; set; }
+
+    [Required]
+    public string Name { get; set; }
+
+    [Range(0, 1000)]
+    public decimal Price { get; set; }
+
+    public int CategoryId { get; set; }
+    public Category Category { get; set; }
+}
